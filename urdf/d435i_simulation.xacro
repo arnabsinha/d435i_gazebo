@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--Develped by Daniel Ordonez 22.05.2018 - daniels.ordonez@gmail.com
+  INFORMATION:
+    This is an example of how to use the realsense-rs200 macro function.
+-->
+<robot name="robot_with_d435i" xmlns:xacro="http://ros.org/wiki/xacro">
+    <link name="world"/>
+
+    <!-- Import macro for realsense-RS200 camera-->
+    <xacro:include filename="$(find d435i_gazebo)/urdf/d435i.urdf.xacro"/>
+    <!-- Create camera instance -->
+    <xacro:sensor_d435i parent="world">
+        <origin xyz="0 0 1.0" rpy="0 0 0" />   
+    </xacro:sensor_d435i>
+</robot>
